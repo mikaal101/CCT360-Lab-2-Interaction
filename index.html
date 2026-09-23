@@ -5,7 +5,7 @@
         <style>
 
             * {
-                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
             .navbar {
                 background: linear-gradient(to bottom right, rgb(184, 240, 184), beige);
@@ -63,17 +63,29 @@
         </div>
         <section class="cards">
             <div class="card" id="corner">
-                <h2>This button changes the corner radius of this card!</h2>
-                <button class="butt">Press</button>
+                <h2 id="card1text">This button changes the corner radius of this card!</h2>
+                <button onclick="cornerfunction()" class="butt">Press</button>
             </div>
-            <div class="card" id="grad-and-font">
-                <h2>This button changes the gradient of this card and the font!</h2>
-                <button class="butt">Press</button>
+            <div class="card" id="backcolor">
+                <h2 id="card2text">This button changes the background color of this card and the font!</h2>
+                <button onclick="gradfontFunction()" class="butt">Press</button>
             </div>
             <div class="card" id="popup">
                 <h2>This button will show a pop up message!</h2>
                 <button class="butt">Press</button>
             </div>
         </section>
+        <script>
+            function cornerfunction() {
+                document.getElementById("corner").style.borderRadius = "0px";
+                document.getElementById("card1text").innerHTML = "Now the corner radius is 0!";
+            }
+
+            function gradfontFunction() {
+                document.getElementById("backcolor").style.backgroundColor = "white";
+                document.getElementById("card2text").style.fontFamily = "'Courier New', Courier, monospace";
+                document.getElementById("card2text").style.innerHTML = "Great! Now the color and font is changed.";
+            }
+        </script>
     </body>
 </html>
