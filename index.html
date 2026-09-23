@@ -3,10 +3,14 @@
     <head>
         <title>CCT360 Lab 2</title>
         <style>
+
+            * {
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            }
             .navbar {
-                background: linear-gradient(to bottom right, lightgreen, beige);
+                background: linear-gradient(to bottom right, rgb(184, 240, 184), beige);
                 border-radius: 50px;
-                box-shadow: 5px 5px 10px black;
+                box-shadow: 5px 5px 10px grey;
                 padding: 20px;
                 margin: 50px;
                 text-align: center;
@@ -26,15 +30,29 @@
                 border: 1px black;
                 border-radius: 32px;
                 padding: 30px;
+                box-shadow: 2px 2px 4px grey;
             }
 
             .butt {
                 padding: 10px;
                 text-align: center;
-                background-color: lightgreen;
+                background-color: rgb(184, 240, 184);
                 border-radius: 25%;
                 border: 1px lightgrey;
                 box-shadow: 1px 1px 2px black;
+                margin-left: 20px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                font-size: 16px;
+            }
+
+            .butt:hover {
+                box-shadow: 1px 1px 4px black;
+                background-color: lightgreen;
+            }
+
+            .card:hover {
+                box-shadow: 2px 2px 5px rgb(81, 81, 81);
             }
 
         </style>
@@ -46,15 +64,15 @@
         <section class="cards">
             <div class="card" id="corner">
                 <h2>This button changes the corner radius of this card!</h2>
-                <button class="butt">Change</button>
+                <button class="butt">Press</button>
             </div>
             <div class="card" id="grad-and-font">
                 <h2>This button changes the gradient of this card and the font!</h2>
-                <button class="butt">Change</button>
+                <button class="butt">Press</button>
             </div>
             <div class="card" id="popup">
                 <h2>This button will show a pop up message!</h2>
-                <button class="butt">Change</button>
+                <button class="butt">Press</button>
             </div>
         </section>
     </body>
