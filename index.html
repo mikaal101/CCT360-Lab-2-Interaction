@@ -70,9 +70,9 @@
                 <h2 id="card2text">This button changes the background color of this card and the font!</h2>
                 <button onclick="gradfontFunction()" class="butt">Press</button>
             </div>
-            <div class="card" id="popup">
-                <h2>This button will show a pop up message!</h2>
-                <button class="butt">Press</button>
+            <div class="card" id="removecard">
+                <h2>This button will remove this card!</h2>
+                <button onclick="confirmFunction()" class="butt">Press</button>
             </div>
         </section>
         <script>
@@ -84,7 +84,17 @@
             function gradfontFunction() {
                 document.getElementById("backcolor").style.backgroundColor = "white";
                 document.getElementById("card2text").style.fontFamily = "'Courier New', Courier, monospace";
-                document.getElementById("card2text").style.innerHTML = "Great! Now the color and font is changed.";
+                document.getElementById("card2text").innerHTML = "Great! Now the color and font is changed.";
+            }
+
+            function confirmFunction() {
+                let x = window.confirm("Are you sure you want to remove this card?");
+                if (x) {
+                    let card3 = document.getElementById("removecard").style;
+                    card3.backgroundColor = "white";
+                    card3.border = "0px white";
+                    card3.boxShadow = "0px 0px 0px white";
+                }
             }
         </script>
     </body>
