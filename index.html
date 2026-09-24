@@ -71,7 +71,7 @@
                 <button onclick="gradfontFunction()" class="butt">Press</button>
             </div>
             <div class="card" id="removecard">
-                <h2>This button will remove this card!</h2>
+                <h2 id="card3text">This button will remove this card!</h2>
                 <button onclick="confirmFunction()" class="butt">Press</button>
             </div>
         </section>
@@ -94,6 +94,7 @@
                     card3.backgroundColor = "white";
                     card3.border = "0px white";
                     card3.boxShadow = "0px 0px 0px white";
+                    document.getElementById("card3text").innerHTML = "Oh no! this text and the button is not on a card anymore!"
                 }
             }
         </script>
